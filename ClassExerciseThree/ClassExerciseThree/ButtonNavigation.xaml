@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ClassExerciseThree.ButtonNavigation">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Header Label-->
+            <Label  Text="Button Navigation" 
+                    Style="{StaticResource labelStyle}"/>
+
+            <!--Second Stacklayout-->
+            <StackLayout
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="Center"
+                Orientation="Horizontal">
+
+                <StackLayout.Resources>
+                    <ResourceDictionary>
+                        <Style x:Key="buttonStyle" TargetType="Button">
+                            <Setter Property="FontSize" Value="Small"/>
+                            <Setter Property="BackgroundColor" Value="Green" />
+                            <Setter Property="TextColor" Value="White" />
+                            <Setter Property="BorderWidth" Value="2" />
+                            <Setter Property="BorderColor" Value="Red" />
+                        </Style>
+                    </ResourceDictionary>
+                </StackLayout.Resources>
+
+                <Button Text="Label"
+                        Style="{StaticResource buttonStyle}"
+                        x:Name="label"
+                        Clicked="Label_Clicked" />
+
+                <Button Text="BoxView"
+                        Style="{StaticResource buttonStyle}"
+                        x:Name="boxView"
+                        Clicked="BoxView_Clicked"/>
+
+                <Button Text="ScrollView"
+                        Style="{StaticResource buttonStyle}"
+                        x:Name="scrollView"
+                        Clicked="ScrollView_Clicked"/>
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
